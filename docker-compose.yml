@@ -6,6 +6,7 @@ networks:
 
 services:
   nginx:
+    restart: always
     image: nginx
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
@@ -15,6 +16,7 @@ services:
       - proxy
 
   web-blue-01:
+    restart: always
     image: nginx
     volumes:
       - ./azul.html:/usr/share/nginx/html/index.html
@@ -23,6 +25,7 @@ services:
       - proxy
 
   web-blue-02:
+    restart: always
     image: nginx
     volumes:
       - ./azul.html:/usr/share/nginx/html/index.html
@@ -31,6 +34,7 @@ services:
       - proxy
 
   web-green-01:
+    restart: always
     image: nginx
     volumes:
       - ./verde.html:/usr/share/nginx/html/index.html
@@ -39,6 +43,7 @@ services:
       - proxy
 
   web-green-02:
+    restart: always
     image: nginx
     volumes:
       - ./verde.html:/usr/share/nginx/html/index.html
